@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
+  <xs:element name="HAMSHAHRI2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="COPYRIGHT"/>
+        <xs:element maxOccurs="unbounded" ref="DOC"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="COPYRIGHT" type="xs:string"/>
+  <xs:element name="DOC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="DOCID"/>
+        <xs:element ref="DOCNO"/>
+        <xs:element ref="ORIGINALFILE"/>
+        <xs:element ref="ISSUE"/>
+        <xs:element minOccurs="2" maxOccurs="2" ref="DATE"/>
+        <xs:element minOccurs="2" maxOccurs="2" ref="CAT"/>
+        <xs:element ref="TITLE"/>
+        <xs:element ref="TEXT"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DOCID" type="xs:string"/>
+  <xs:element name="DOCNO" type="xs:string"/>
+  <xs:element name="ORIGINALFILE" type="xs:string"/>
+  <xs:element name="ISSUE" type="xs:string"/>
+  <xs:element name="DATE">
+    <xs:complexType mixed="true">
+      <xs:attribute name="calender" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="Persian"/>
+            <xs:enumeration value="Western"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CAT">
+    <xs:complexType mixed="true">
+      <xs:attribute ref="xml:lang" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TITLE" type="xs:string"/>
+  <xs:element name="TEXT" type="xs:string"/>
+</xs:schema>
