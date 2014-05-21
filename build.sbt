@@ -14,8 +14,7 @@ description := "Test using scalaxb"
 
 version := "1.0.0"
 
-scalaVersion := "2.11.0"
-//scalaVersion := "2.10.4"
+scalaVersion := "2.11.1"
 
 scalacOptions ++= Seq(
 //  "-deprecation",
@@ -29,7 +28,7 @@ libraryDependencies ++= {
   CrossVersion.partialVersion(scalaVersion.value) match {
     case Some((2, scalaMajor)) if scalaMajor >= 11 =>
       Seq(
-        "org.scala-lang.modules" %% "scala-xml" % "1.0.1",
+        "org.scala-lang.modules" %% "scala-xml" % "1.0.2",
         "org.scala-lang.modules" %% "scala-parser-combinators" % "1.0.1"
       )
     case _ =>
@@ -38,8 +37,8 @@ libraryDependencies ++= {
 }
 
 libraryDependencies ++= Seq(
-  "org.scalacheck" %% "scalacheck" % "1.11.3" % "test",
-  "org.specs2" %% "specs2" % "2.3.11" % "test"
+  "org.scalacheck" %% "scalacheck" % "1.11.4" % "test",
+  "org.specs2" %% "specs2" % "2.3.12" % "test"
 )
 
 scalaxbSettings
