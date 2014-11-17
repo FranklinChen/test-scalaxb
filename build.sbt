@@ -38,7 +38,7 @@ libraryDependencies ++= {
 
 libraryDependencies ++= Seq(
   "org.scalacheck" %% "scalacheck" % "1.11.6" % "test",
-  "org.specs2" %% "specs2" % "2.4.10" % "test"
+  "org.specs2" %% "specs2" % "2.4.11" % "test"
 )
 
 scalaxbSettings
