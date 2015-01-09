@@ -46,3 +46,5 @@ scalaxbSettings
 packageName in scalaxb in Compile := "com.franklinchen"
 
 sourceGenerators in Compile <+= scalaxb in Compile
+
+resolvers += "Scalaz Bintray Repo" at "http://dl.bintray.com/scalaz/releases"
