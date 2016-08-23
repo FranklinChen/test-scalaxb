@@ -14,7 +14,7 @@ class TalkbankSpec extends Specification { def is = s2"""
 
     val root = scalaxb.fromXML[CHAT](elem)
 
-    root.Id ==== "words"
+    root.Corpus ==== "bates"
   }
 
   def e2 = {
@@ -24,8 +24,6 @@ class TalkbankSpec extends Specification { def is = s2"""
     val chatoption = Nil
     // Constructing the tree is untyped.
     val attributes: Map[String, scalaxb.DataRecord[Any]] = Map(
-      // The key seems redundant and unchecked here.
-      "@huh" -> scalaxb.DataRecord(None, Some("huh"), "silly")
     )
 
     val chat = CHAT(

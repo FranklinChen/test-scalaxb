@@ -17,10 +17,9 @@ class XmlSchemaValidatorSpec extends Specification { def is = s2"""
     val elem = <CHAT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xmlns="http://www.talkbank.org/ns/talkbank"
       xsi:schemaLocation="http://www.talkbank.org/ns/talkbank http://talkbank.org/software/talkbank.xsd"
-      Version="2.0.2"
+      Version="2.1.1"
       Lang="eng"
       Corpus="bates"
-      Id="words"
       Date="1984-01-01">
   <Participants>
     <participant
@@ -28,7 +27,6 @@ class XmlSchemaValidatorSpec extends Specification { def is = s2"""
       role="Child"
       language="eng"
       age="P1Y8M"
-      ageTo="P1Y9M"
       sex="female"
       group="normal"
 
@@ -78,10 +76,9 @@ class XmlSchemaValidatorSpec extends Specification { def is = s2"""
     val elemString = """<CHAT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xmlns="http://www.talkbank.org/ns/talkbank"
       xsi:schemaLocation="http://www.talkbank.org/ns/talkbank http://talkbank.org/software/talkbank.xsd"
-      Version="2.0.2"
+      Version="2.1.1"
       Lang="eng"
       Corpus="bates"
-      Id="words"
       Date="1984-01-01">
   <Participants>
     <participant
@@ -89,7 +86,6 @@ class XmlSchemaValidatorSpec extends Specification { def is = s2"""
       role="Child"
       language="eng"
       age="P1Y8M"
-      ageTo="P1Y9M"
       sex="female"
       group="normal"
 
